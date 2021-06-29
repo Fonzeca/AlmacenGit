@@ -4,8 +4,9 @@ pipeline {
     stage('version') {
       steps {
         sh '''java -version
-maven --version
 mvn -version'''
+        sh '''cd Almacen
+mvn -B -DskipTests clean package'''
       }
     }
 

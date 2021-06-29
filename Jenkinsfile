@@ -10,8 +10,6 @@ pipeline {
     stage('Build') {
       agent any
       steps {
-        sh 'ls'
-        sh 'cd Almacen'
         sh 'mvn -B -DskipTest clean package'
       }
     }

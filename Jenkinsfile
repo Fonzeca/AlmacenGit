@@ -10,6 +10,7 @@ pipeline {
     stage('Build') {
       agent any
       steps {
+        sh 'ls'
         sh 'mvn -B -DskipTest clean package'
       }
     }
